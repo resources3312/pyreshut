@@ -22,11 +22,6 @@ def shutdown():
     src.shutdown()
 
 
-def hibernation():
-    src = CDLL("./pyreshut.so")
-    src.hibernation()
-
-
 def reboot():
     src = CDLL("./pyreshut.so")
     src.reboot_machine()
@@ -39,9 +34,5 @@ def debug_menu():
         shutdown()
     elif "reboot" in sys.argv:
         reboot()
-    elif "hiber" in sys.argv:
-        hibernation()
     else:
         print("Choose option")
-if __name__ == '__main__':
-    debug_menu()

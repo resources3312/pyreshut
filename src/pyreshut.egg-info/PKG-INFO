@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: pyreshut
-Version: 1.0
-Summary: In readme
+Version: 1.1
+Summary: Shutdown or Reboot you machine with one function
 Author-email: ViCoder32 <x.daahome@gmail.com>
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License

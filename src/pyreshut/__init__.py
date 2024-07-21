@@ -1,1 +1,1 @@
-While I just exist 
+print("[+] Pyreshut was installed")

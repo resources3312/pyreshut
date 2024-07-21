@@ -15,7 +15,6 @@ Coded by: ViCoder32
 #include <unistd.h>
 #define REBOOT 0x1234567 
 #define POWER_OFF 0x4321FEDC 
-#define HIBERNATION 0xD000FCE2
 
 
 
@@ -23,14 +22,6 @@ void shutdown(){
   sync();   
   reboot(POWER_OFF); 
   }
-
-
-
-void hibernation(){
-  sync();
-  reboot(HIBERNATION);
-  }
-
 
 
 void reboot_machine(){
