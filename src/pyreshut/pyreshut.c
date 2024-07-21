@@ -1,5 +1,4 @@
-#! /usr/bin/python
-"""
+/* 
 Pyreshut 1.0
 Coded by: ViCoder32
 
@@ -12,34 +11,31 @@ Coded by: ViCoder32
     I written for 1 hour with beer and berserk on 
     monitor. Fuck, 45 strings in python file, 
     and 38 strings in C file
-
-"""
-from ctypes import CDLL
-import sys
-
-def shutdown():
-    src = CDLL("./pyreshut.so")
-    src.shutdown()
+ */
+#include <unistd.h>
+#define REBOOT 0x1234567 
+#define POWER_OFF 0x4321FEDC 
+#define HIBERNATION 0xD000FCE2
 
 
 
-
-
-def reboot():
-    src = CDLL("./pyreshut.so")
-    src.reboot_machine()
-
+void shutdown(){
+  sync();   
+  reboot(POWER_OFF); 
+  }
 
 
 
-def debug_menu():
-    if "off" in sys.argv:
-        shutdown()
-    elif "reboot" in sys.argv:
-        reboot()
-  
-if __name__ == '__main__':
-    pass
+void hibernation(){
+  sync();
+  reboot(HIBERNATION);
+  }
 
+
+
+void reboot_machine(){
+  sync();
+  reboot(REBOOT);
+  }
 
 

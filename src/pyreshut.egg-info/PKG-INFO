@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pyreshut
+Version: 1.0
+Summary: In readme
+Author-email: ViCoder32 <x.daahome@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Pyreshut
+Or Py-Reboot-Shutdown, this most correct name for this library.
+I decided write this library only because all ways which
+I found, use os util like shutdown or reboot, but I didnt 
+like this way, and thats why you can use this library 
+
+
+# Pip install 
+```
+pip install pyreshut
+```
+
+

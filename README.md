@@ -10,13 +10,4 @@ like this way, and thats why you can use this library
 pip install pyreshut
 ```
 
-# Source install
-```
-git clone
 
-cd pyreshut
-
-
-
-
-```
