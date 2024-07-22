@@ -36,3 +36,12 @@ def debug_menu():
         reboot()
     else:
         print("Choose option")
+
+
+if __name__ == '__main__':
+    debug_menu()
+
+
+
+
+
