@@ -1,47 +1,34 @@
 #! /usr/bin/python
 """
-Pyreshut 1.0
+Pyreshut 1.1
 Coded by: ViCoder32
 
-    Simple or even primitive library for reboot or
-    shutdown pc with using low-level code on my
-    favourite C. In next version I will update this
-    library and add new functional, but while it`s 
-    basic kit for control most low level your pc, 
-    I don`t know why nobody written library, which
-    I written for 1 hour with beer and berserk on 
-    monitor. Fuck, 45 strings in python file, 
-    and 38 strings in C file
+    Simple library for reboot or
+    shutdown pc with using C language.
 
 """
 from ctypes import CDLL
 import sys
 
-def shutdown():
-    src = CDLL("./pyreshut.so")
-    src.shutdown()
 
+class powerController:
+    def __init__(self):
+        self.src = CDLL("./pyreshut.so")
+    
+    def shutdown(self)
+        self.src.shutdown()
 
-def reboot():
-    src = CDLL("./pyreshut.so")
-    src.reboot_machine()
-
-
-
-
-def debug_menu():
-    if "off" in sys.argv:
-        shutdown()
-    elif "reboot" in sys.argv:
-        reboot()
-    else:
-        print("Choose option")
-
-
-if __name__ == '__main__':
-    debug_menu()
+    def reboot():
+        self.src.reboot_machine()
 
 
 
 
+def debugMenu():
+    power = powerController()
+    match sys.argv[1]:
+        case "shutdown": power.shutdown()
+        case "reboot": power.reboot()
 
+
+if __name__ == '__main__': pass
