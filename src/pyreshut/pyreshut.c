@@ -11,15 +11,19 @@ Coded by: ViCoder32
 
 
 
-void shutdown(){
+void 
+shutdown()
+{
   sync();   
   reboot(POWER_OFF); 
-  }
+}
 
 
-void reboot_machine(){
+void
+reboot_machine()
+{
   sync();
   reboot(REBOOT);
-  }
+}
 
 
